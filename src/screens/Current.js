@@ -28,16 +28,16 @@ const Current = () => {
   const ShowData = ({ item }) => {
     // console.log(data)
     return (
-      <View style={{flexDirection:'row'}}>
-        <View>
-          <Image  style={{flex: 1, width: 50, height: 50, resizeMode:'contain'}}
+      <View style={{flexDirection:'row' , margin:15}}>
+        <View style={{ marginRight:10, }}>
+          <Image  style={{flex: 1, width: 100, height: 100, resizeMode:'contain',borderRadius:20,backgroundColor:'rgb(217, 217, 217)'}}
            source={{uri:`https://openweathermap.org/img/wn/${item.weather[0]?.icon}@2x.png`}}/>
         </View>
         <View>
-          <Text>{item.clouds?.all}</Text>
-          <Text>{item.main?.temp}</Text>
-          <Text>{item.main?.humidity}</Text>
-          <Text>{item.wind?.speed}</Text>
+          <Text style={{fontSize:22, fontWeight:'bold' , color:'black'}} >Colouds :{item.clouds?.all}</Text>
+          <Text style={{ fontWeight:'bold' , color:'black'}}>Temperature : {item.main?.temp}</Text>
+          <Text style={{ fontWeight:'bold' , color:'black'}}>Humidity : {item.main?.humidity}</Text>
+          <Text style={{ fontWeight:'bold' , color:'black'}}>Wind Speed : {item.wind?.speed}</Text>
         </View>
 
       </View>
